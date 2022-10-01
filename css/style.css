@@ -1,0 +1,736 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  font-family: Arial;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#desktop-container {
+  position: fixed;
+  background: rgb(0,0,0) !important;
+  background: -moz-linear-gradient(180deg, rgba(0,0,0,1) 36%, rgba(38,38,38,1) 100%) !important;
+  background: -webkit-linear-gradient(180deg, rgba(0,0,0,1) 36%, rgba(38,38,38,1) 100%) !important;
+  background: linear-gradient(180deg, rgba(0,0,0,1) 36%, rgba(38,38,38,1) 100%) !important;
+}
+
+#pop-out-button {
+  display: inline-block;
+  padding: 5px 7.5px;
+  background: white;
+  border-radius: 2.5px;
+  border: inset 2px gray;
+}
+
+body.night #pop-out-button {
+  background: #262626;
+}
+
+#pop-out-button:hover {
+  border: solid 2px gray;
+}
+
+#pop-out-button:active {
+  border: inset 2px white;
+  background: gray;
+  color: white;
+}
+
+body.night #pop-out-button:active {
+  background: black;
+}
+
+body #pop-out-button-container {
+  display: none;
+}
+
+body.mobile #pop-out-button-container {
+  display: none !important;
+}
+
+body.desktop #pop-out-button-container {
+  display: block;
+}
+
+/* Prevent text highlighting */
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+}
+/* CUSTOM */
+body {
+  overflow: hidden;
+}
+
+body * {
+  color: #262626;
+  font-family: 'Courier New', Courier, monospace;
+  border-color: #262626;
+}
+
+#main-container {
+    width: 300px;
+    position: relative;
+    height: 650px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+body.night * {
+  color: #81d68b;
+  border-color: #81d68b;
+}
+
+#favorites-collection-button:hover svg {
+  fill: white;
+}
+
+#view-playlist-button {
+  border-left: solid 1px;
+}
+
+#view-playlist-button:hover * {
+  color: white;
+}
+
+.heart-fill {
+  fill: #ff4d4d;
+}
+
+.heart-border {
+  fill: black;
+}
+
+#volume-button {
+  position: relative;
+  float: right;
+  width: 25px;
+  height: 25px;
+  border-left: solid 1px;
+}
+
+#volume-button:hover {
+  background: black;
+}
+
+#volume-button:hover svg {
+  stroke: white;
+}
+
+#volume-slider-container {
+  position: absolute;
+  top: 100%;
+  right: 0px;
+  width: 25px;
+  background: white;
+  border: solid 1px;
+  border-right: none;
+  text-align: center;
+}
+
+body.night #volume-slider-container {
+  background: #262626;
+}
+
+#volume-slider {
+  display: inline-block;
+-webkit-appearance: slider-vertical;
+  width: 25px;
+      margin: 5px 0;
+    padding: 0;
+}
+
+body.night .heart-border {
+  fill: white;
+}
+
+.button:hover .heart-border {
+  fill: white;
+}
+
+.heart-dash {
+  fill: white;
+}
+
+.title-item {
+  text-align: center !important;
+}
+
+.title-item span {
+  font-size: 90%;
+}
+
+.share-icon {
+  fill: black;
+}
+
+body.night .share-icon:hover {
+  fill: #00f094;
+}
+
+.share-icon:hover {
+  fill: #02c077;
+}
+
+body.night .share-icon {
+  fill: white;
+}
+
+#top-nav,
+#nav-container,
+#playlist-container,
+#footer-container {
+  background-color: white;
+}
+
+body.night #top-nav,
+body.night #nav-container,
+body.night #playlist-container,
+body.night #footer-container {
+  background-color: #262626;
+}
+
+.settings-import {
+  width: 80%;
+  margin: 0 auto;
+
+}
+
+.layer.tippy-top {
+  z-index: 99999999999999999999;
+}
+
+#top-nav {
+  height: 25px;
+  border-bottom: solid 1px;
+  border-top: solid 1px;
+}
+
+.top-nav-item {
+  position: relative;
+  float: left;
+  height: 25px;
+  line-height: 25px;
+  vertical-align: middle;
+  border-right: solid 1px;
+}
+
+.top-nav-item:hover > span {
+  text-decoration: underline;
+}
+
+
+.link-icon {
+  fill: black;
+}
+
+body.night .link-icon {
+  fill: white;
+}
+
+.top-nav-item > span {
+  padding: 0px 10px;
+}
+
+.top-nav-item-button {
+  display: inline-block;
+  text-decoration: none;
+  height: 25px;
+}
+
+.top-nav-item-button.active {
+  text-decoration: underline;
+}
+
+#loading-text {
+  text-align: center;
+  margin-top: 10px 
+}
+
+.top-nav-dropdown {
+  position: absolute;
+  z-index: 9999;
+  background: white;
+  top: 100%;
+  margin-top: 1px;
+}
+
+body.night .top-nav-dropdown {
+  position: absolute;
+  z-index: 9999;
+  background: #262626;
+  top: 100%;
+}
+
+.top-nav-dropdown.align-left {
+  left: 0;
+}
+
+.top-nav-dropdown.align-right {
+  right: 0;
+}
+
+.top-nav-dropdown-item {
+  white-space: nowrap;
+  padding: 5px;
+}
+
+.top-nav-dropdown-item.sub-item {
+  font-size: 90%;
+}
+
+.top-nav-dropdown-item.interactive:hover {
+  background-color: black;
+  color: white;
+}
+
+.top-nav-dropdown-item.border {
+  border-bottom: dashed 1px black;
+}
+
+.playlist-result,
+.playlist-link {
+  text-align: left !important;
+}
+
+.playlist-link p.interactive {
+  text-decoration: underline;
+}
+
+.new-playlist-input {
+  background: white;
+}
+
+body.night .new-playlist-input {
+  background: #262626;
+}
+
+.playlist-link p {
+  display: inline-block;
+}
+
+.playlist-link p.disabled,
+.playlist-link p:hover {
+  text-decoration: none;
+}
+
+.item-check {
+  fill: green;
+}
+
+.playlist-mod-button {
+  display: inline-block;
+  width: 15px;
+  line-height: 15px;
+  height: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.playlist-mod-button.disabled {
+  opacity: .2;
+}
+
+.playlist-mod-button.interactive:hover {
+  font-size: 1.2rem;
+}
+
+.remove-playlist-button {
+  width: 20px;
+  height: 1.2rem;
+  float: right;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.remove-playlist-button svg {
+  fill: red;
+}
+
+.playlist-result span {
+  display: inline-block;
+  float: right;
+  text-decoration: none;
+}
+
+.track-link {
+  font-family: 'Arial';
+  font-weight: 400;
+  text-decoration: underline;
+  text-align: left;
+  line-height: 1rem;
+  margin-bottom: 5px;
+}
+
+.playlist-mod-button {
+  margin-right: 10px;
+}
+
+.search-result {
+  text-align: left !important;
+}
+
+.track-link:hover {
+  text-decoration: none;
+}
+
+.track-link.artist-link-container {
+  text-decoration: none;
+}
+
+.button {
+  width: 100px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.button:hover {
+  background: black;
+  color: white;
+}
+
+#nav-container {
+  position: relative;
+  height: 30px;
+  width: 100%;
+  border: solid 1px;
+  border-width: 1px 0 1px;
+}
+
+#search-container {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  border-style: solid;
+  border-bottom-width: 1px;
+  background: white;
+}
+
+#search-bar-toggle {
+  border-right: solid 1px;
+}
+
+#search-bar-toggle:hover {
+  background: black;
+}
+
+#search-bar-toggle:hover svg {
+  fill: white !important;
+}
+
+#search-bar-toggle svg {
+  fill: #262626;
+}
+
+body.night #search-bar-toggle svg {
+  fill: #81d68b;
+}
+
+body.night #search-container {
+  background: #262626;
+}
+
+#search-bar {
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+  height: 30px;
+  background: white;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+}
+
+#search-bar * {
+  background: white;
+}
+
+body.night #search-bar * {
+  background: #262626;
+}
+
+body.night #search-bar {
+  background: #262626;
+}
+
+#search-bar-submit {
+  display: inline-block;
+  height: 30px;
+  margin-right: 10px;
+  line-height: 30px;
+  padding: 0px 10px;
+  border-right: solid 1px;
+  background: white;
+}
+
+#search-bar-submit:hover {
+  background: black;
+  color: white;
+}
+
+#search-bar-input {
+  border: solid 1px;
+  width: 175px;
+}
+
+#playlist-container {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  overflow-y: scroll;
+}
+
+.playlist-item {
+  padding: 7.5px 10px;
+  border-style: dashed;
+  border-color: #262626;
+  border-width: 0px 0px 1px;
+  text-align: right;
+}
+
+body.night .playlist-item.playing {
+  background-color: #313440 !important;
+}
+
+.playlist-item.playing {
+  background-color: #f4fff0 !important;
+}
+
+.playlist-item * {
+  font-size: 1rem;
+}
+
+#footer-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 30px;
+  width: 100%;
+  border-top: solid 1px;
+}
+
+.footer-button {
+  width: 100px;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+}
+
+.footer-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.footer-button.disabled {
+  background: #c4c4c4 !important;
+  color: #262626 !important;
+}
+
+.footer-button.disabled:hover {
+  cursor: default;
+}
+
+body.night .footer-button.disabled {
+  background: black !important;
+  color: #262626 !important;
+}
+
+.disabled {
+  opacity: .6;
+}
+
+.disabled:hover,
+.disabled *:hover {
+  cursor: default !important;
+}
+
+.artist-favorite-toggle {
+    vertical-align: middle;
+}
+
+
+.artist-favorite-toggle .heart-fill{
+  fill: transparent !important;
+}
+
+.artist-favorite-toggle.favorite .heart-fill {
+  fill: #ff4d4d !important;
+}
+
+#new-playlist-input-container {
+  text-align: center;
+  padding: 10px 0px;
+}
+
+#new-playlist-input-container input,
+#new-playlist-input-container span {
+  margin: 0;
+  display: inline-block;
+  box-sizing: border-box;
+  height: 25px;
+  line-height: 25px;
+  vertical-align: middle;
+}
+
+#new-playlist-input-container input {
+  border: solid 1px;
+  text-indent: 5px;
+  white-space: nowrap;
+}
+
+#new-playlist-input-container span {
+  border: solid 1px;
+  border-right: none;
+  padding: 0px 5px;
+}
+
+#new-playlist-input-container span:hover {
+  background: black;
+  color: white;
+  border: solid 1px black;
+  border-right: none;
+}
+
+.artist-favorite-toggle .heart-dash {
+    fill: black !important;
+}
+
+.artist-favorite-toggle.favorite .heart-dash,
+.artist-favorite-toggle:hover .heart-dash,
+body.night .artist-favorite-toggle .heart-dash,
+body.night .artist-favorite-toggle .heart-border {
+    fill: white !important;
+}
+
+#tracklist-open {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 45px;
+  height: 45px;
+}
+
+#tracklist-open-icon {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+}
+
+body.desktop #tracklist-menu-item,
+body.desktop #tracklist-open-icon {
+  display: none;
+}
+
+.add-to-playlist svg {
+  fill: black;
+}
+
+.add-to-playlist:hover svg {
+  fill: #247bff !important;
+}
+
+body.night .add-to-playlist svg {
+  fill: white;
+}
+
+body.night .add-to-playlist:hover svg {
+  fill: #33b8ff !important;
+}
+
+.artist-link {
+  font-family: 'Arial';
+  text-decoration: underline;
+}
+
+.artist-link:hover {
+  text-decoration: none;
+}
+
+.track-icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#current-track-text {
+  padding: 5px;
+}
+
+.active-marker {
+  visibility: hidden;
+}
+
+.gateway-select-option.active .active-marker {
+  visibility: visible;
+}
+
+#settings-import {
+  border: solid 1px;
+  width: 150px;
+  overflow: hidden;
+  background: white;
+}
+
+body.night #settings-import {
+  background: #262626;
+}
+
+#settings-import-submit {
+  text-align: center;
+  text-decoration: underline;
+}
+
+#settings-import-submit:hover {
+  text-decoration: none;
+}
