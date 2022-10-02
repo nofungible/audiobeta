@@ -48,11 +48,11 @@ table {
 }
 
 #desktop-container {
-  position: fixed;
-  background: rgb(0,0,0) !important;
-  background: -moz-linear-gradient(180deg, rgba(0,0,0,1) 36%, rgba(38,38,38,1) 100%) !important;
-  background: -webkit-linear-gradient(180deg, rgba(0,0,0,1) 36%, rgba(38,38,38,1) 100%) !important;
-  background: linear-gradient(180deg, rgba(0,0,0,1) 36%, rgba(38,38,38,1) 100%) !important;
+  height: 100%;
+  background: rgb(0,0,0);
+  background: -moz-linear-gradient(180deg, rgba(0,0,0,1) 36%, rgba(38,38,38,1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(0,0,0,1) 36%, rgba(38,38,38,1) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 36%, rgba(38,38,38,1) 100%);
 }
 
 #pop-out-button {
@@ -66,6 +66,9 @@ table {
 body.night #pop-out-button {
   background: #262626;
 }
+body.night #pop-out-button:active {
+  background: black;
+}
 
 #pop-out-button:hover {
   border: solid 2px gray;
@@ -77,9 +80,6 @@ body.night #pop-out-button {
   color: white;
 }
 
-body.night #pop-out-button:active {
-  background: black;
-}
 
 body #pop-out-button-container {
   display: none;
@@ -105,7 +105,7 @@ body.desktop #pop-out-button-container {
 }
 /* CUSTOM */
 body {
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 body * {

@@ -10,13 +10,15 @@
         <title>TezosAudioPlayer</title>
     </head>
     <body>
-      <div id="desktop-container" class="table">
+      <div class="table" id="desktop-container">
         <div class="table-cell">
+          <br>
           <div id="main-container">
             <div id="top-nav">
               <div id="file-button" class="top-nav-item interactive">
                 <span class="top-nav-item-button">File</span>
                 <div class="top-nav-dropdown align-left layer tippy-top hidden">
+                    <div data-action="wallet-unsync" class="action-controller top-nav-dropdown-item interactive border">Unsync Wallet</div>
                   <div data-action="app:reload" class="action-controller top-nav-dropdown-item interactive border">Reload tzAudio</div>
                   <div data-action="copy-text:settings" class="action-controller top-nav-dropdown-item interactive border">Export Settings</div>
                   <div class="top-nav-dropdown-item border">
@@ -280,8 +282,16 @@
           </div>
           <div id="pop-out-button-container" style="text-align: center;">
             <br>
-            <div id="pop-out-button" class="interactive">Pop Out Player</div>            
+            <div id="pop-out-button" class="interactive">Pop Out Player</div>
           </div>
+            <p style="text-align: center;">
+              <br><br><br>
+              ---
+              <br>
+            <a href="https://twitter.com/noFungibleNFT">@noFungibleNFT</a>
+            <br><br>
+            <br>
+            </p>
         </div>
       </div>
 
