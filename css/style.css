@@ -47,6 +47,15 @@ table {
     border-spacing: 0;
 }
 
+body.popout {
+  overflow: hidden;
+}
+
+body.popout #desktop-footer-text,
+body.popout #header-block {
+  display: none;
+}
+
 #desktop-footer-text,
 #desktop-footer-text * {
 color: #81d68b !important;
