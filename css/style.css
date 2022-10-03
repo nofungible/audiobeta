@@ -108,6 +108,8 @@ body.desktop #pop-out-button-container {
   display: block;
 }
 
+input, textarea { -webkit-user-select:text;}
+
 /* CUSTOM */
 body {
   /*overflow: hidden;*/
