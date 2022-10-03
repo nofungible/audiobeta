@@ -136,6 +136,26 @@ body * {
     overflow: hidden;
 }
 
+body.mobile {
+  position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body.mobile #main-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+body.mobile #main-container {
+    width: 100%;
+    height: 100%;
+}
+
 body.night * {
   color: #81d68b;
   border-color: #81d68b;
