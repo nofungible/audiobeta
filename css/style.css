@@ -245,19 +245,15 @@ body.night .heart-border {
 }
 
 .share-icon {
-  fill: black;
+  fill: transparent;
 }
 
-body.night .share-icon:hover {
-  fill: #00f094;
+.share-icon:hover * {
+  color: green !important;
 }
 
-.share-icon:hover {
-  fill: #02c077;
-}
-
-body.night .share-icon {
-  fill: white;
+body.night .share-icon * {
+  color: white;
 }
 
 #top-nav,
@@ -419,12 +415,21 @@ body.night .new-playlist-input {
   font-size: 1.2rem;
 }
 
+.copy-playlist-button,
 .remove-playlist-button {
   width: 20px;
   height: 1.2rem;
   float: right;
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 15px;
+}
+
+.copy-playlist-button svg {
+  fill: black;
+}
+
+body.night .copy-playlist-button svg {
+  fill: #81d68b;
 }
 
 .remove-playlist-button svg {
