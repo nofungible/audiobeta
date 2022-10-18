@@ -57,6 +57,32 @@ body.popout #header-block {
   display: none;
 }
 
+.save-playlist-icon:hover {
+  opacity: 1;
+}
+
+body.night .save-playlist-icon {
+  fill: white;
+}
+
+body.halloween .save-playlist-icon {
+  fill: white;
+}
+
+body.halloween .save-playlist-icon:hover {
+  fill: red;
+}
+
+.save-playlist-icon {
+  fill: black;
+    opacity: .8;
+    display: inline-block;
+    width: 15px;
+    height: 16px;
+    vertical-align: bottom;
+    margin-left: 5px;
+}
+
 #desktop-footer-text,
 #desktop-footer-text * {
 color: #81d68b !important;
@@ -70,12 +96,25 @@ color: #81d68b !important;
   background: linear-gradient(180deg, rgba(0,0,0,1) 36%, rgba(38,38,38,1) 100%);
 }
 
+#page-footer-flair {
+  display: none;
+}
+
+body.halloween #page-footer-flair {
+  display: table-cell;
+  opacity: 1 !important;
+}
+
 #pop-out-button {
   display: inline-block;
   padding: 5px 7.5px;
   background: white;
   border-radius: 2.5px;
   border: inset 2px gray;
+}
+
+body.halloween #pop-out-button {
+  background: #121212 !important;
 }
 
 body.night #pop-out-button {
@@ -132,6 +171,12 @@ body * {
   border-color: #262626;
 }
 
+body.halloween * {
+  color: #ff9408 !important;
+  border-color: #ff9408 !important;
+  font-family: 'Times New Roman', Georgia, Garamond;
+}
+
 #main-container {
     width: 300px;
     position: relative;
@@ -174,7 +219,7 @@ body.night * {
 }
 
 #view-playlist-button:hover * {
-  color: white;
+  fill: white;
 }
 
 .heart-fill {
@@ -216,6 +261,10 @@ body.night #volume-slider-container {
   background: #262626;
 }
 
+body.halloween #volume-slider-container {
+  background: #121212;
+}
+
 #volume-slider {
   display: inline-block;
 -webkit-appearance: slider-vertical;
@@ -245,15 +294,23 @@ body.night .heart-border {
 }
 
 .share-icon {
-  fill: transparent;
+  fill: black;
 }
 
-.share-icon:hover * {
-  color: green !important;
+body.night .share-icon {
+  fill: white;
 }
 
-body.night .share-icon * {
-  color: white;
+body.halloween .share-icon {
+  fill: white;
+}
+
+.share-icon:hover {
+  fill: green !important;
+}
+
+body.halloween .share-icon:hover {
+  fill: red !important;
 }
 
 #top-nav,
@@ -268,6 +325,13 @@ body.night #nav-container,
 body.night #playlist-container,
 body.night #footer-container {
   background-color: #262626;
+}
+
+body.halloween #top-nav,
+body.halloween #nav-container,
+body.halloween #playlist-container,
+body.halloween #footer-container {
+  background-color: #121212 !important;
 }
 
 .settings-import {
@@ -342,6 +406,10 @@ body.night .top-nav-dropdown {
   top: 100%;
 }
 
+body.halloween .top-nav-dropdown {
+  background: #121212;
+}
+
 .top-nav-dropdown.align-left {
   left: 0;
 }
@@ -373,6 +441,14 @@ body.night .top-nav-dropdown {
   text-align: left !important;
 }
 
+body.halloween .playlist-link * {
+  color: white !important;
+}
+
+body.halloween .playlist-link:hover * {
+  color: red !important;
+}
+
 .playlist-link p.interactive {
   text-decoration: underline;
 }
@@ -383,6 +459,10 @@ body.night .top-nav-dropdown {
 
 body.night .new-playlist-input {
   background: #262626;
+}
+
+body.halloween .new-playlist-input {
+  background: #121212;
 }
 
 .playlist-link p {
@@ -407,6 +487,14 @@ body.night .new-playlist-input {
   font-weight: bold;
 }
 
+body.halloween .playlist-mod-button {
+  color: white !important;
+}
+
+body.halloween .playlist-mod-button:hover {
+  color: red !important;
+}
+
 .playlist-mod-button.disabled {
   opacity: .2;
 }
@@ -421,7 +509,7 @@ body.night .new-playlist-input {
   height: 1.2rem;
   float: right;
   display: inline-block;
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 .copy-playlist-button svg {
@@ -431,6 +519,19 @@ body.night .new-playlist-input {
 body.night .copy-playlist-button svg {
   fill: #81d68b;
 }
+
+body.halloween .copy-playlist-button svg {
+  fill: white;
+}
+
+body.halloween .copy-playlist-button:hover svg {
+  fill: red;
+}
+
+/*
+.remove-playlist-button {
+  margin-left: 20px;
+}*/
 
 .remove-playlist-button svg {
   fill: red;
@@ -443,7 +544,7 @@ body.night .copy-playlist-button svg {
 }
 
 .track-link {
-  font-family: 'Arial';
+  font-family: 'Arial' !important;
   font-weight: 400;
   text-decoration: underline;
   text-align: left;
@@ -463,6 +564,14 @@ body.night .copy-playlist-button svg {
   text-decoration: none;
 }
 
+body.halloween .track-link {
+  color: #ededed !important;
+}
+
+body.halloween .track-link:hover {
+  color: red !important;
+}
+
 .track-link.artist-link-container {
   text-decoration: none;
 }
@@ -476,6 +585,10 @@ body.night .copy-playlist-button svg {
 .button:hover {
   background: black;
   color: white;
+}
+
+body.halloween .button:hover {
+  color: white !important;
 }
 
 #nav-container {
@@ -515,8 +628,16 @@ body.night #search-bar-toggle svg {
   fill: #81d68b;
 }
 
+body.halloween #search-bar-toggle svg {
+  fill: #ff9408;
+}
+
 body.night #search-container {
   background: #262626;
+}
+
+body.halloween #search-container {
+  background: #121212 !important;
 }
 
 #search-bar {
@@ -540,6 +661,15 @@ body.night #search-bar * {
 body.night #search-bar {
   background: #262626;
 }
+
+body.halloween #search-bar * {
+  background: #121212;
+}
+
+body.halloween #search-bar {
+  background: #121212;
+}
+
 
 #search-bar-submit {
   display: inline-block;
@@ -579,6 +709,10 @@ body.night #search-bar {
 
 body.night .playlist-item.playing {
   background-color: #313440 !important;
+}
+
+body.halloween .playlist-item.playing {
+  background-color: #262626 !important;
 }
 
 .playlist-item.playing {
@@ -623,6 +757,11 @@ body.night .playlist-item.playing {
 body.night .footer-button.disabled {
   background: black !important;
   color: #262626 !important;
+}
+
+body.halloween .footer-button.disabled {
+  background: #121212 !important;
+  color: #ff9408 !important;
 }
 
 .disabled {
@@ -692,6 +831,16 @@ body.night .artist-favorite-toggle .heart-border {
     fill: white !important;
 }
 
+body.halloween .artist-favorite-toggle .heart-dash,
+body.halloween .artist-favorite-toggle .heart-border {
+    fill: white !important;
+}
+
+body.halloween .artist-favorite-toggle:hover .heart-dash,
+body.halloween .artist-favorite-toggle:hover .heart-border {
+    fill: red !important;
+}
+
 #tracklist-open {
   position: absolute;
   top: 0px;
@@ -728,8 +877,16 @@ body.night .add-to-playlist:hover svg {
   fill: #33b8ff !important;
 }
 
+body.halloween .add-to-playlist svg {
+  fill: white;
+}
+
+body.halloween .add-to-playlist:hover svg {
+  fill: red !important;
+}
+
 .artist-link {
-  font-family: 'Arial';
+  font-family: 'Arial' !important;
   text-decoration: underline;
 }
 
@@ -737,10 +894,19 @@ body.night .add-to-playlist:hover svg {
   text-decoration: none;
 }
 
+body.halloween .artist-link {
+  color: #ededed !important;
+}
+
+body.halloween .artist-link:hover {
+  color: red !important;
+}
+
 .track-icon {
   display: inline-block;
   width: 25px;
   height: 25px;
+  margin: 0px 5px;
   line-height: 25px;
   vertical-align: middle;
   text-align: center;
@@ -767,6 +933,10 @@ body.night .add-to-playlist:hover svg {
 
 body.night #settings-import {
   background: #262626;
+}
+
+body.halloween #settings-import {
+  background: #121212;
 }
 
 #settings-import-submit {

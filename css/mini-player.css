@@ -3,7 +3,8 @@
 }
 
 #mini-player * {
-  color: white;
+  color: white !important;
+  font-family: 'Arial' !important; 
 }
 
 #current-track-artist {
@@ -477,6 +478,32 @@ body.mobile #track-artwork-container {
     box-sizing: border-box;
   }
   
+  #progress-bar-fill-flair {
+    display: none;
+  }
+
+  body.halloween #progress-bar-fill-flair {
+    display: block;
+  }
+
+  #progress-bar-fill-flair {
+    position: absolute;
+    right: 2px;
+    width: 10px;
+    height: 100%;
+    background: transparent;
+    line-height: 1px;
+    font-size: 1.5rem;
+  }
+
+  body.halloween #ui #front-footer #progress-bar {
+    border-color: #f5413b !important
+  }
+
+  body.halloween #ui #front-footer #progress-bar-fill {
+    background: red !important
+  }
+
   /*@media only screen and (max-width: 600px) {*/
     #ui #front-footer #progress-bar {
       border-width: 3px;
