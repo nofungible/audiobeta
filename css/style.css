@@ -724,7 +724,7 @@ body.night .playlist-item.playing {
 }
 
 body.halloween .playlist-item.playing {
-  background-color: #262626 !important;
+  background-color: #1a1a1a !important;
 }
 
 .playlist-item.playing {
