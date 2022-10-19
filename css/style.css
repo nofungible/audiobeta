@@ -114,7 +114,7 @@ body.halloween #page-footer-flair {
 }
 
 body.halloween #pop-out-button {
-  background: #121212 !important;
+  background: #262626 !important;
 }
 
 body.night #pop-out-button {
@@ -262,7 +262,7 @@ body.night #volume-slider-container {
 }
 
 body.halloween #volume-slider-container {
-  background: #121212;
+  background: #262626;
 }
 
 #volume-slider {
@@ -331,7 +331,7 @@ body.halloween #top-nav,
 body.halloween #nav-container,
 body.halloween #playlist-container,
 body.halloween #footer-container {
-  background-color: #121212 !important;
+  background-color: #262626 !important;
 }
 
 .settings-import {
@@ -407,7 +407,7 @@ body.night .top-nav-dropdown {
 }
 
 body.halloween .top-nav-dropdown {
-  background: #121212;
+  background: #262626;
 }
 
 .top-nav-dropdown.align-left {
@@ -454,6 +454,7 @@ body.halloween .playlist-link:hover * {
 }
 
 .new-playlist-input {
+  position: relative;
   background: white;
 }
 
@@ -462,7 +463,18 @@ body.night .new-playlist-input {
 }
 
 body.halloween .new-playlist-input {
-  background: #121212;
+  background: #262626;
+}
+
+#new-playlist-input-container {
+  position: relative;
+  width: 100%;
+  height: 35px;
+}
+
+#input-wrapper {
+  position: absolute;
+  width: 100%;
 }
 
 .playlist-link p {
@@ -637,7 +649,7 @@ body.night #search-container {
 }
 
 body.halloween #search-container {
-  background: #121212 !important;
+  background: #262626 !important;
 }
 
 #search-bar {
@@ -663,11 +675,11 @@ body.night #search-bar {
 }
 
 body.halloween #search-bar * {
-  background: #121212;
+  background: #262626;
 }
 
 body.halloween #search-bar {
-  background: #121212;
+  background: #262626;
 }
 
 
@@ -760,7 +772,7 @@ body.night .footer-button.disabled {
 }
 
 body.halloween .footer-button.disabled {
-  background: #121212 !important;
+  background: #262626 !important;
   color: #ff9408 !important;
 }
 
@@ -803,7 +815,7 @@ body.halloween .footer-button.disabled {
 
 #new-playlist-input-container input {
   border: solid 1px;
-  text-indent: 5px;
+  /*text-indent: 5px;*/
   white-space: nowrap;
 }
 
@@ -936,7 +948,7 @@ body.night #settings-import {
 }
 
 body.halloween #settings-import {
-  background: #121212;
+  background: #262626;
 }
 
 #settings-import-submit {
