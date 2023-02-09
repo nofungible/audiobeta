@@ -2671,7 +2671,7 @@
 	     * @param {Object} multiProviderOptions See {@link multiProviderOptions}.
 	     */
 	    constructor(key, options = {}) {
-	        super(key, ["*"], "https://data.objkt.com/v2/graphql");
+	        super(key, ["*"], "https://data.objkt.com/v3/graphql");
 
 	        this.providerOptions = options;
 	    }
@@ -3868,7 +3868,7 @@
                 name
                 metadata
                 createdAt
-                version`}parseObjktQueryFilters(e){const{after:t,before:r,issuer:n}=e;const i={};if(r){i.createdAt_lt=r}if(t){i.createdAt_gt=t}if(n){const{$eq:s,$neq:a,$in:o,$nin:u}=n;if(a||u){throw new Error(`$neq | $nin not supported by ${this.key} issuer select query partials`)}const c=s?[s]:o;i.author_in=c}return Object.keys(i).length&&i||null}parseTokenMetadata(e){const{id:t,createdAt:r,issuer:{author:{id:n}={}},metadata:{artifactUri:i,description:s,displayUri:a},name:o,version:u}=e;const c=u===0?this.v1Contract:this.v2Contract;return{contract:{address:c,tokenId:t},createdAt:r,description:s,ipfs:{artifact:i,display:a},issuer:{address:n},mime:"application/x-directory",name:o,tid:`${c}:${t}`,_metadata:{providerKey:this.key}}}}class It extends Bt{constructor(e,t={}){super(e,["*"],"https://data.objkt.com/v2/graphql");this.providerOptions=t}platformName="objkt.com";platformUrl="https://objkt.com";async fetchTokens(t){const e={limit:t.limit};if(t.orderBy.date){e.orderBy=[{timestamp:t.orderBy.date==="DESC"?"desc":"asc"}]}const r=this.parseGraphQLWhereClause(t);if(r){e.where=r}e.where=e.where||{};e.where._and=e.where._and||[];e.where._and.push({supply:{_gt:0},timestamp:{_is_null:false},fa:{creator:{address:{_is_null:false}}}});const n=`query Token($where: token_bool_exp, $limit: Int, $orderBy: [token_order_by!]) {
+                version`}parseObjktQueryFilters(e){const{after:t,before:r,issuer:n}=e;const i={};if(r){i.createdAt_lt=r}if(t){i.createdAt_gt=t}if(n){const{$eq:s,$neq:a,$in:o,$nin:u}=n;if(a||u){throw new Error(`$neq | $nin not supported by ${this.key} issuer select query partials`)}const c=s?[s]:o;i.author_in=c}return Object.keys(i).length&&i||null}parseTokenMetadata(e){const{id:t,createdAt:r,issuer:{author:{id:n}={}},metadata:{artifactUri:i,description:s,displayUri:a},name:o,version:u}=e;const c=u===0?this.v1Contract:this.v2Contract;return{contract:{address:c,tokenId:t},createdAt:r,description:s,ipfs:{artifact:i,display:a},issuer:{address:n},mime:"application/x-directory",name:o,tid:`${c}:${t}`,_metadata:{providerKey:this.key}}}}class It extends Bt{constructor(e,t={}){super(e,["*"],"https://data.objkt.com/v3/graphql");this.providerOptions=t}platformName="objkt.com";platformUrl="https://objkt.com";async fetchTokens(t){const e={limit:t.limit};if(t.orderBy.date){e.orderBy=[{timestamp:t.orderBy.date==="DESC"?"desc":"asc"}]}const r=this.parseGraphQLWhereClause(t);if(r){e.where=r}e.where=e.where||{};e.where._and=e.where._and||[];e.where._and.push({supply:{_gt:0},timestamp:{_is_null:false},fa:{creator:{address:{_is_null:false}}}});const n=`query Token($where: token_bool_exp, $limit: Int, $orderBy: [token_order_by!]) {
                             token(where: $where, limit: $limit, order_by: $orderBy) {
                                 pk
                                 description
@@ -3945,7 +3945,7 @@ const{factory:tokenFetcherFactory,providers:{Tezos:{ObjktcomNative,TeiaRocks}}}=
                           }
                         }
                       }
-                    }`,variables:{distinctOn:"creator_id",where:Object.assign({mime:{_in:AUDIO_MIME_TYPE_SET}},e?{token_holders:{holder_id:{_eq:e}}}:{})}})});const s=await t.json();if(!s.data.token_aggregate.nodes.length){return[]}return s.data.token_aggregate.nodes.map(e=>{const{creator:{address:t,name:s}}=e;return{tz:t,handle:s}})}async function getObjktcomTokenCreators(e){const t=await fetch("https://data.objkt.com/v2/graphql",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({query:`query Fa($distinctOn: [fa_select_column!], $where: fa_bool_exp) {
+                    }`,variables:{distinctOn:"creator_id",where:Object.assign({mime:{_in:AUDIO_MIME_TYPE_SET}},e?{token_holders:{holder_id:{_eq:e}}}:{})}})});const s=await t.json();if(!s.data.token_aggregate.nodes.length){return[]}return s.data.token_aggregate.nodes.map(e=>{const{creator:{address:t,name:s}}=e;return{tz:t,handle:s}})}async function getObjktcomTokenCreators(e){const t=await fetch("https://data.objkt.com/v3/graphql",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({query:`query Fa($distinctOn: [fa_select_column!], $where: fa_bool_exp) {
                       fa(distinct_on: $distinctOn, where: $where) {
                         creator {
                           address
